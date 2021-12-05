@@ -30,8 +30,8 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                         {field: 'pay_num', title: __('Pay_num'), operate:'BETWEEN'},
                         {field: 'ticket_num', title: __('Ticket_num'), operate:'BETWEEN'},
                         {field: 'percent', title: __('Percent'), operate:'BETWEEN'},
-                        {field: 'created', title: __('Created')},
-                        {field: 'operate', title: __('Operate'), table: table, events: Table.api.events.operate, formatter: Table.api.formatter.operate}
+                        {field: 'created', title: __('Created'), formatter: Table.api.formatter.datetime, operate: 'RANGE', addclass: 'datetimerange', sortable: true},
+                        // {field: 'operate', title: __('Operate'), table: table, events: Table.api.events.operate, formatter: Table.api.formatter.operate}
                     ]
                 ]
             });

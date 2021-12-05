@@ -6,11 +6,11 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
             Table.api.init({
                 extend: {
                     index_url: 'gameinfo/index' + location.search,
-                    add_url: 'gameinfo/add',
+                    // add_url: 'gameinfo/add',
                     edit_url: 'gameinfo/edit',
-                    del_url: 'gameinfo/del',
-                    multi_url: 'gameinfo/multi',
-                    import_url: 'gameinfo/import',
+                    // del_url: 'gameinfo/del',
+                    // multi_url: 'gameinfo/multi',
+                    // import_url: 'gameinfo/import',
                     table: 'bsc_game_info',
                 }
             });
@@ -30,9 +30,9 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                         {field: 'seed_pool', title: __('Seed_pool'), operate:'BETWEEN'},
                         {field: 'jack_pool', title: __('Jack_pool'), operate:'BETWEEN'},
                         {field: 'end_time', title: __('End_time'), operate:'RANGE', addclass:'datetimerange', autocomplete:false, formatter: Table.api.formatter.datetime},
-                        {field: 'status', title: __('Status')},
-                        {field: 'updated', title: __('Updated')},
-                        {field: 'created', title: __('Created')},
+                        {field: 'status', title: __('状态'), formatter: Table.api.formatter.status, searchList: {1: __('进行中'), 2: __('已结束')}},
+                        // {field: 'updated', title: __('Updated')},
+                        {field: 'created', title: __('Created'), formatter: Table.api.formatter.datetime, operate: 'RANGE', addclass: 'datetimerange', sortable: true},
                         {field: 'operate', title: __('Operate'), table: table, events: Table.api.events.operate, formatter: Table.api.formatter.operate}
                     ]
                 ]

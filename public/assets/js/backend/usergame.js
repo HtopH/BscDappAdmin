@@ -27,13 +27,15 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                         {checkbox: true},
                         {field: 'id', title: __('Id')},
                         {field: 'uid', title: __('Uid')},
-                        {field: 'game_id', title: __('Game_id')},
+                        {field: 'game_round', title: __('场次')},
                         {field: 'invest_num', title: __('Invest_num'), operate:'BETWEEN'},
                         {field: 'ticket_num', title: __('Ticket_num'), operate:'BETWEEN'},
-                        {field: 'award_num', title: __('Award_num'), operate:'BETWEEN'},
-                        {field: 'status', title: __('Status')},
-                        {field: 'created', title: __('Created')},
-                        {field: 'operate', title: __('Operate'), table: table, events: Table.api.events.operate, formatter: Table.api.formatter.operate}
+                        {field: 'award_num', title: __('奖池奖励'), operate:'BETWEEN'},
+                        {field: 'will_num', title: __('预计奖励'), operate:'BETWEEN'},
+                        {field: 'return_num', title: __('剩余奖励'), operate:'BETWEEN'},
+                        {field: 'status', title: __('状态'), formatter: Table.api.formatter.status, searchList: {1: __('收益中'), 2: __('已出局'), 3: __('已转卖')}},
+                        {field: 'created', title: __('Created'), formatter: Table.api.formatter.datetime, operate: 'RANGE', addclass: 'datetimerange', sortable: true},
+                        // {field: 'operate', title: __('Operate'), table: table, events: Table.api.events.operate, formatter: Table.api.formatter.operate}
                     ]
                 ]
             });

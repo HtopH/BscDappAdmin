@@ -3,19 +3,19 @@
     <div class="form-group">
         <label class="control-label col-xs-12 col-sm-2">{:__('Round')}:</label>
         <div class="col-xs-12 col-sm-8">
-            <input id="c-round" data-rule="required" class="form-control" name="row[round]" type="number" value="{$row.round|htmlentities}">
+            <input disabled id="c-round" data-rule="required" class="form-control" name="row[round]" type="number" value="{$row.round|htmlentities}">
         </div>
     </div>
     <div class="form-group">
         <label class="control-label col-xs-12 col-sm-2">{:__('Seed_pool')}:</label>
         <div class="col-xs-12 col-sm-8">
-            <input id="c-seed_pool" data-rule="required" class="form-control" step="0.000001" name="row[seed_pool]" type="number" value="{$row.seed_pool|htmlentities}">
+            <input disabled id="c-seed_pool" data-rule="required" class="form-control" step="0.000001" name="row[seed_pool]" type="number" value="{$row.seed_pool|htmlentities}">
         </div>
     </div>
     <div class="form-group">
         <label class="control-label col-xs-12 col-sm-2">{:__('Jack_pool')}:</label>
         <div class="col-xs-12 col-sm-8">
-            <input id="c-jack_pool" data-rule="required" class="form-control" step="0.000001" name="row[jack_pool]" type="number" value="{$row.jack_pool|htmlentities}">
+            <input disabled id="c-jack_pool" data-rule="required" class="form-control" step="0.000001" name="row[jack_pool]" type="number" value="{$row.jack_pool|htmlentities}">
         </div>
     </div>
     <div class="form-group">
@@ -24,24 +24,24 @@
             <input id="c-end_time" data-rule="required" class="form-control datetimepicker" data-date-format="YYYY-MM-DD HH:mm:ss" data-use-current="true" name="row[end_time]" type="text" value="{:$row.end_time?datetime($row.end_time):''}">
         </div>
     </div>
-    <div class="form-group">
-        <label class="control-label col-xs-12 col-sm-2">{:__('Status')}:</label>
-        <div class="col-xs-12 col-sm-8">
-            <input id="c-status" data-rule="required" class="form-control" name="row[status]" type="number" value="{$row.status|htmlentities}">
-        </div>
-    </div>
-    <div class="form-group">
-        <label class="control-label col-xs-12 col-sm-2">{:__('Updated')}:</label>
-        <div class="col-xs-12 col-sm-8">
-            <input id="c-updated" data-rule="required" class="form-control" name="row[updated]" type="number" value="{$row.updated|htmlentities}">
-        </div>
-    </div>
-    <div class="form-group">
-        <label class="control-label col-xs-12 col-sm-2">{:__('Created')}:</label>
-        <div class="col-xs-12 col-sm-8">
-            <input id="c-created" class="form-control" name="row[created]" type="number" value="{$row.created|htmlentities}">
-        </div>
-    </div>
+<!--    <div class="form-group">-->
+<!--        <label class="control-label col-xs-12 col-sm-2">{:__('Status')}:</label>-->
+<!--        <div class="col-xs-12 col-sm-8">-->
+<!--            <input id="c-status" data-rule="required" class="form-control" name="row[status]" type="number" value="{$row.status|htmlentities}">-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div class="form-group">-->
+<!--        <label class="control-label col-xs-12 col-sm-2">{:__('Updated')}:</label>-->
+<!--        <div class="col-xs-12 col-sm-8">-->
+<!--            <input id="c-updated" data-rule="required" class="form-control" name="row[updated]" type="number" value="{$row.updated|htmlentities}">-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div class="form-group">-->
+<!--        <label class="control-label col-xs-12 col-sm-2">{:__('Created')}:</label>-->
+<!--        <div class="col-xs-12 col-sm-8">-->
+<!--            <input id="c-created" class="form-control" name="row[created]" type="number" value="{$row.created|htmlentities}">-->
+<!--        </div>-->
+<!--    </div>-->
     <div class="form-group layer-footer">
         <label class="control-label col-xs-12 col-sm-2"></label>
         <div class="col-xs-12 col-sm-8">
